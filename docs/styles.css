@@ -60,6 +60,7 @@ h1, h2 { letter-spacing: -.045em; }
 .pillar h3 { font-size: clamp(1rem, 2.17vw, 1.58rem); font-weight: 600; text-transform: uppercase; }
 .pillar-type { margin-top: -.42rem; color: var(--forest-deep); font-size: .67rem; line-height: 1.25; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
 .pillar p { font: clamp(.92rem, 1.84vw, 1.24rem)/1.32 var(--serif); }
+.ecosystem-overview { display: flex; width: fit-content; margin: .8rem auto 0; text-align: center; }
 
 .site-footer { margin-top: clamp(2.75rem, 5.5vw, 5rem); text-align: center; }
 .footer-symbol { display: flex; align-items: center; justify-content: center; gap: clamp(1rem, 4.3vw, 2.5rem); width: min(calc(100% - 2rem), 32rem); margin-inline: auto; }
