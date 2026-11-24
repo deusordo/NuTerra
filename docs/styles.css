@@ -93,6 +93,10 @@ h1, h2 { letter-spacing: -.045em; }
 .home-project { width: min(calc(100% - var(--gap) * 2), 57rem); margin-block-start: clamp(2.4rem, 6vw, 4.5rem); padding-block-start: 1.45rem; border-block-start: 1px solid var(--line); }
 .home-project h2 { font-size: clamp(1.85rem, 4vw, 3rem); margin-block-end: .4rem; }
 .home-project p { max-width: 42rem; color: var(--muted); }
+.familyos-intro { width: min(calc(100% - var(--gap) * 2), 57rem); display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: clamp(.8rem, 2.6vw, 1.45rem); margin-block-start: clamp(1.65rem, 4vw, 2.85rem); padding: clamp(1rem, 3.5vw, 1.85rem); border: 1px solid var(--border); border-radius: .72rem; background: var(--wash); }
+.familyos-intro h2 { font-size: clamp(1.85rem, 4vw, 2.7rem); margin-block-end: .4rem; }
+.familyos-intro p { max-width: 40rem; color: var(--muted); }
+.familyos-icon { width: clamp(1.9rem, 5vw, 2.9rem); color: var(--forest-deep); fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
 .question-list { margin: .6rem 0 0; }
 .question-list dt { font-weight: 700; margin-block-start: 1rem; }
 .question-list dd { margin: .2rem 0 .85rem; color: var(--muted); }
