@@ -22,7 +22,8 @@
   <meta name="twitter:title" content="Vision, Roadmap and Participation | The NuTerra Project">
   <meta name="twitter:description" content="Read the vision, coordinating framework, roadmap, research starting points, and ways to participate in NuTerra.">
   <meta name="twitter:image" content="https://deusordo.github.io/NuTerra/assets/social.png">
-  <link rel="stylesheet" href="./styles.css">
+  <script src="./theme.js"></script>
+  <link rel="stylesheet" href="./styles.css?v=20261123theme">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -38,6 +39,11 @@
         <a href="./project.html#roadmap">Roadmap</a>
         <a href="./project.html#participate">Participate</a>
       </nav>
+      <button class="theme-toggle" data-theme-toggle type="button" hidden>
+          <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41m0-14.14-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>
+          <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.7 8.7 0 0 1 9.6 3.5 8.8 8.8 0 1 0 20.5 14.4Z"/></svg>
+          <span data-theme-label>Theme</span>
+        </button>
     </div>
   </header>
   <main class="detail" id="content" tabindex="-1">
@@ -67,7 +73,7 @@
 
     <section id="progress" aria-labelledby="progress-title">
       <h2 id="progress-title">Progress</h2>
-      <p>The Deus Ordo website and the existing VA site are publicly accessible. This roadmap describes goals for the wider NuTerra ecosystem. Verified pilot results will be recorded here as they are available to share.</p>
+      <p>Deus Ordo, VATRA, NuMind, and VIO have public sites describing their work and plans. This roadmap describes goals for the wider NuTerra ecosystem. Verified pilot results will be recorded here as they are available to share.</p>
     </section>
 
     <section id="research" aria-labelledby="research-title">

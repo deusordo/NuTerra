@@ -22,7 +22,8 @@
   <meta name="twitter:title" content="The Ecosystem | The NuTerra Project">
   <meta name="twitter:description" content="Explore Source, NuMind, VATRA, Deus Ordo, and VIO and the work each pillar is designed to do.">
   <meta name="twitter:image" content="https://deusordo.github.io/NuTerra/assets/social.png">
-  <link rel="stylesheet" href="./styles.css">
+  <script src="./theme.js"></script>
+  <link rel="stylesheet" href="./styles.css?v=20261123theme">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -38,6 +39,11 @@
         <a href="./project.html#roadmap">Roadmap</a>
         <a href="./project.html#participate">Participate</a>
       </nav>
+      <button class="theme-toggle" data-theme-toggle type="button" hidden>
+          <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41m0-14.14-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>
+          <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.7 8.7 0 0 1 9.6 3.5 8.8 8.8 0 1 0 20.5 14.4Z"/></svg>
+          <span data-theme-label>Theme</span>
+        </button>
     </div>
   </header>
   <main class="detail" id="content" tabindex="-1">
@@ -53,13 +59,13 @@
       <div class="pillar-heading"><img src="./assets/numind.svg" alt="" width="64" height="64"><h2 id="numind-heading">NuMind</h2></div>
       <span class="status">Knowledge</span>
       <p>NuMind turns source material into useful lessons, references, manuals, and blueprints. Its scope includes science, engineering, mathematics, history, health, agriculture, and construction. Digital, physical, multilingual, and offline formats help preserve essential knowledge across generations.</p>
+      <a class="text-link" href="../Numind/">Visit NuMind <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a>
     </section>
     <section id="vatra" aria-labelledby="vatra-heading">
       <div class="pillar-heading"><img src="./assets/vatra.svg" alt="" width="64" height="64"><h2 id="vatra-heading">VATRA</h2></div>
       <span class="status">Society</span>
       <p>VATRA is the proposed society pillar. Its work includes studying land, housing, energy, water, sanitation, food, workshops, healthcare access, transportation, and stewardship. The goal is to reduce dependencies while retaining access to modern tools and wider society.</p>
-      <p>The existing VA site is a personal portfolio and contact page. A dedicated public VATRA site is a future step.</p>
-      <a class="text-link" href="https://deusordo.github.io/va/">Visit the existing VA site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a>
+      <a class="text-link" href="../Vatra/">Visit VATRA <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a>
     </section>
     <section id="deus-ordo" aria-labelledby="deus-ordo-heading">
       <div class="pillar-heading"><img src="./assets/deus-ordo-mark.svg" alt="" width="64" height="64"><h2 id="deus-ordo-heading">Deus Ordo</h2></div>
@@ -71,6 +77,7 @@
       <div class="pillar-heading"><img src="./assets/vio.svg" alt="" width="64" height="64"><h2 id="vio-heading">VIO</h2></div>
       <span class="status">Technology</span>
       <p>VIO brings together local and distributed AI, computing, automation, robotics, research, engineering, networking, and cybersecurity. Its role is to make knowledge practical while strengthening the ability to run, maintain, and replace technology independently.</p>
+      <a class="text-link" href="../VIO/">Visit VIO <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a>
     </section>
     <a class="text-link" href="./project.html#framework">How the pillars work together <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></a>
   </main>
