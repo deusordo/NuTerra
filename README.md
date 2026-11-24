@@ -1,6 +1,6 @@
 # The NuTerra Project
 
-NuTerra connects five pillars for preserving knowledge, advancing technology, developing people, and building resilient communities. This repository contains the public GitHub Pages site. It uses static HTML, CSS, and SVG assets.
+NuTerra connects six pillars for preserving knowledge, advancing technology, developing people, supporting families, and building resilient communities. This repository contains the public GitHub Pages site. It uses static HTML, CSS, and SVG assets.
 
 ## Preview
 

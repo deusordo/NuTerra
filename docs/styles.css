@@ -51,11 +51,11 @@ h1, h2 { letter-spacing: -.045em; }
 .eyeline { display: flex; align-items: center; gap: clamp(.9rem, 3vw, 2.1rem); width: min(100%, 50rem); margin-inline: auto; color: var(--ink); font: 600 clamp(.82rem, 2vw, 1.32rem)/1.15 var(--serif); letter-spacing: .23em; text-transform: uppercase; text-align: center; }
 .eyeline::before, .eyeline::after { content: ""; height: 1px; background: var(--line); flex: 1; }
 .ecosystem h2 { margin: .35em 0 clamp(1.45rem, 4.55vw, 3.25rem); font-size: clamp(2.15rem, 5.7vw, 4.7rem); text-align: center; }
-.pillars { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: clamp(.65rem, 1.22vw, 1rem); margin: 0; padding: 0; }
+.pillars { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: clamp(.65rem, 1.22vw, 1rem); margin: 0; padding: 0; }
 .pillars li { display: flex; min-width: 0; }
 .pillar { width: 100%; min-height: clamp(13.75rem, 29.2vw, 19.2rem); padding: clamp(1.05rem, 2.6vw, 2.1rem) clamp(.55rem, 1.26vw, 1.2rem); display: flex; flex-direction: column; align-items: center; gap: .57rem; text-align: center; color: var(--ink); text-decoration: none; border: 1px solid var(--border); border-radius: .72rem; background: var(--card); }
 .pillar:hover { border-color: var(--forest); background: var(--wash); }
-.pillar :is(img, .ordo) { width: clamp(2.7rem, 6.9vw, 4.4rem); height: clamp(2.7rem, 6.9vw, 4.4rem); object-fit: contain; }
+.pillar :is(img, .ordo, .familyos-icon) { width: clamp(2.7rem, 6.9vw, 4.4rem); height: clamp(2.7rem, 6.9vw, 4.4rem); object-fit: contain; }
 .pillar .ordo { width: clamp(4.35rem, 11.25vw, 7.6rem); background: var(--forest-deep); mask: url("./assets/deus-ordo-mark.svg") center / contain no-repeat; }
 .pillar h3 { font-size: clamp(1rem, 2.17vw, 1.58rem); font-weight: 600; text-transform: uppercase; }
 .pillar-type { margin-top: -.42rem; color: var(--forest-deep); font-size: .67rem; line-height: 1.25; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
@@ -93,10 +93,7 @@ h1, h2 { letter-spacing: -.045em; }
 .home-project { width: min(calc(100% - var(--gap) * 2), 57rem); margin-block-start: clamp(2.4rem, 6vw, 4.5rem); padding-block-start: 1.45rem; border-block-start: 1px solid var(--line); }
 .home-project h2 { font-size: clamp(1.85rem, 4vw, 3rem); margin-block-end: .4rem; }
 .home-project p { max-width: 42rem; color: var(--muted); }
-.familyos-intro { width: min(calc(100% - var(--gap) * 2), 57rem); display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: clamp(.8rem, 2.6vw, 1.45rem); margin-block-start: clamp(1.65rem, 4vw, 2.85rem); padding: clamp(1rem, 3.5vw, 1.85rem); border: 1px solid var(--border); border-radius: .72rem; background: var(--wash); }
-.familyos-intro h2 { font-size: clamp(1.85rem, 4vw, 2.7rem); margin-block-end: .4rem; }
-.familyos-intro p { max-width: 40rem; color: var(--muted); }
-.familyos-icon { width: clamp(1.9rem, 5vw, 2.9rem); color: var(--forest-deep); fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
+.familyos-icon { color: var(--forest-deep); fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
 .question-list { margin: .6rem 0 0; }
 .question-list dt { font-weight: 700; margin-block-start: 1rem; }
 .question-list dd { margin: .2rem 0 .85rem; color: var(--muted); }
