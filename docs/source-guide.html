@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-palette="forest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public evidence guide | SOURCE</title>
+  <meta name="description" content="Create a traceable record for a public claim, document the review, and verify that an export restores intact.">
+  <link rel="canonical" href="https://deusordo.github.io/NuTerra/source-guide.html">
+  <link rel="icon" href="./assets/source.svg" type="image/svg+xml">
+  <script src="./theme.js"></script>
+  <link rel="stylesheet" href="./guide.css?v=operating-guides">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header><div class="wrap header">
+    <a class="brand" href="./source.html"><img src="./assets/source.svg" width="32" height="32" alt="">SOURCE</a>
+    <nav aria-label="Main navigation"><a href="./source.html">Overview</a><a aria-current="page" href="./source-guide.html">Guide</a><button type="button" data-theme-toggle hidden><span data-theme-label>Theme</span></button></nav>
+  </div></header>
+  <main class="wrap" id="content" tabindex="-1">
+    <h1>Public evidence guide</h1>
+    <p class="intro">Create a traceable record for a public claim, document the review, and verify that an export restores intact.</p>
+    <p class="meta">Worked example · Record what a download’s publisher claims.</p>
+    <div class="actions"><a class="download" href="./source-guide.pdf" download>Download printable guide (PDF)</a></div>
+    <figure><ol class="diagram" role="list"><li>Record the claim<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Review evidence<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Publish a revision<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Verify the export</li></ol><figcaption>Evidence review documents what a source supports. A file manifest lets a reader check the exported bytes.</figcaption></figure>
+    <div class="layout">
+      <nav class="contents" aria-label="On this page"><strong>In order</strong><ol><li><a href="#step-1">Capture the claim and origin</a></li><li><a href="#step-2">Check the scope of the evidence</a></li><li><a href="#step-3">Price and publish a reviewable batch</a></li><li><a href="#step-4">Verify the export and restore it</a></li><li><a href="#step-5">Maintain and upgrade the catalog</a></li></ol></nav>
+      <article><section id="step-1"><h2>1. Capture the claim and origin</h2><p>One record should state one checkable claim. Assign a stable record ID and keep the original URL, publisher, title, edition or date, retrieval date, applicable rights, and the part that supports the claim. Record any privacy restriction before adding the item.</p><p><a href="https://www.w3.org/TR/prov-overview/">W3C provenance model</a> · <a href="./downloads/source-example.csv" download>Download sample records</a></p></section>
+<section id="step-2"><h2>2. Check the scope of the evidence</h2><p>Write what the source establishes, what observation you made, and what remains unknown. For example, the Kiwix publisher explains how to open a ZIM offline. A device-specific test would separately record the device, archive version, test date, and observed behavior. <a href="https://get.kiwix.org/en/solutions/applications/kiwix-reader/">Kiwix’s documentation</a></p></section>
+<section id="step-3"><h2>3. Price and publish a reviewable batch</h2><p>Estimate reviewer time separately from storage. For 12 records at 5 minutes each, review time is 60 minutes. Record the review status, reviewer role, date, and a short justification. Export only material cleared for sharing. Assign corrections their own version and link both versions.</p></section>
+<section id="step-4"><h2>4. Verify the export and restore it</h2><p>Export a UTF-8 CSV or structured data file and keep a SHA-256 manifest for the files permitted in the package. Restore a clean copy, compare file hashes, and open a sample row and its evidence. An example audit with 9 matching files out of 10 has 90% coverage. Inspect the missing or changed file before accepting the restore.</p><p><a href="https://www.rfc-editor.org/rfc/rfc8493.html">BagIt file packaging</a> · <a href="https://www.ndsa.org/publications/levels-of-digital-preservation/">NDSA preservation guidance</a></p></section>
+<section id="step-5"><h2>5. Maintain and upgrade the catalog</h2><p>Review stale links and disputed claims. Record a source’s replacement or loss of access. Keep dated export snapshots, check restore after tooling changes, and keep correction history readable. Use a standard package when exchange with another curator warrants it.</p><p><a href="./source-reference.html#project">See the public evidence example</a></p></section>
+</article>
+    </div>
+  </main>
+  <footer><div class="wrap footer"><p>SOURCE</p><a href="./source.html">Back to the overview</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-palette="forest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private household records guide | FamilyOS</title>
+  <meta name="description" content="Use fictional records to define what belongs to each person, what a household shares, and how recovery should be tested.">
+  <link rel="canonical" href="https://deusordo.github.io/NuTerra/familyos-guide.html">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <script src="./theme.js"></script>
+  <link rel="stylesheet" href="./guide.css?v=operating-guides">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header><div class="wrap header">
+    <a class="brand" href="./ecosystem.html#familyos"><img src="./assets/favicon.svg" width="32" height="32" alt="">FamilyOS</a>
+    <nav aria-label="Main navigation"><a href="./ecosystem.html#familyos">Overview</a><a aria-current="page" href="./familyos-guide.html">Guide</a><button type="button" data-theme-toggle hidden><span data-theme-label>Theme</span></button></nav>
+  </div></header>
+  <main class="wrap" id="content" tabindex="-1">
+    <h1>Private household records guide</h1>
+    <p class="intro">Use fictional records to define what belongs to each person, what a household shares, and how recovery should be tested.</p>
+    <p class="meta">Example data only. Per-person permissions are planned.</p>
+    <div class="actions"><a class="download" href="./familyos-guide.pdf" download>Download printable guide (PDF)</a></div>
+    <figure><ol class="diagram" role="list"><li>Define ownership<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Share by choice<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Check access<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Test recovery</li></ol><figcaption>The public guide demonstrates the design with fictional records. Production access controls are a separate implementation.</figcaption></figure>
+    <div class="layout">
+      <nav class="contents" aria-label="On this page"><strong>In order</strong><ol><li><a href="#step-1">Identify the smallest useful record</a></li><li><a href="#step-2">Set explicit sharing rules</a></li><li><a href="#step-3">Check the planned boundaries</a></li><li><a href="#step-4">Price, maintain, and test recovery</a></li><li><a href="#step-5">Upgrade with a rollback test</a></li></ol></nav>
+      <article><section id="step-1"><h2>1. Identify the smallest useful record</h2><p>Use examples such as a personal routine and a shared grocery list. Identify the subject, owner, purpose, audience, and how long it needs to be retained. Classify personal records as private by default. Identify who can approve changes. <a href="https://www.nist.gov/system/files/documents/2021/01/13/Getting-Started-NIST-Privacy-Framework-Guide.pdf">NIST privacy guide (PDF)</a></p></section>
+<section id="step-2"><h2>2. Set explicit sharing rules</h2><p>Use two fictional people, A and B. A can read and update A’s personal record. B can read and update B’s record. Both can read the shared list. Set any write permission on the shared list explicitly. Test the proposed rules with read, edit, search, export, and sharing actions.</p></section>
+<section id="step-3"><h2>3. Check the planned boundaries</h2><ol><li>Use a disposable sample environment. Load one record per person and one shared record.</li><li>Check what each sees on direct and aggregate views. Record the expected versus observed result for each action.</li><li>Revoke a sample share and confirm it disappears from the person’s view and subsequent exports.</li></ol><p>In an example with eight correct results out of nine, the sample passes about 89% of checks. Investigate the failed access check and rerun the full sample before relying on personal separation. The current prototype uses shared household roles.</p></section>
+<section id="step-4"><h2>4. Price, maintain, and test recovery</h2><p>Budget local storage, encrypted backup media, restore time, and whoever is responsible for review. An example 1 GB export kept in two locations uses about 2 GB before version history. Test restore in an isolated environment and confirm that the expected permissions and record counts survived.</p></section>
+<section id="step-5"><h2>5. Upgrade with a rollback test</h2><p>Before updating the application or rules, keep a protected backup and run the sample checks. Re-run privacy and recovery after upgrading. A private record may leave its normal audience only under a specific documented decision covering the purpose and fields.</p><p><a href="./ecosystem.html#familyos">Read FamilyOS’s role and current status</a></p></section>
+</article>
+    </div>
+  </main>
+  <footer><div class="wrap footer"><p>FamilyOS</p><a href="./ecosystem.html#familyos">Back to the overview</a></div></footer>
+</body>
+</html>
