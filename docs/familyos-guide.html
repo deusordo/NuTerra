@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://deusordo.github.io/NuTerra/familyos-guide.html">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <script src="./theme.js"></script>
-  <link rel="stylesheet" href="./guide.css?v=operating-guides">
+  <link rel="stylesheet" href="./guide.css?v=field-practice">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -20,15 +20,25 @@
     <h1>Private household records guide</h1>
     <p class="intro">Use fictional records to define what belongs to each person, what a household shares, and how recovery should be tested.</p>
     <p class="meta">Example data only. Per-person permissions are planned.</p>
-    <div class="actions"><a class="download" href="./familyos-guide.pdf" download>Download printable guide (PDF)</a></div>
+    <div class="actions"><a class="download" href="./familyos-guide.pdf" download>Download printable guide (PDF)</a><a href="./downloads/familyos-access-checks.csv" download>Access and restore checklist (CSV)</a></div>
     <figure><ol class="diagram" role="list"><li>Define ownership<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Share by choice<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Check access<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Test recovery</li></ol><figcaption>The public guide demonstrates the design with fictional records. Production access controls are a separate implementation.</figcaption></figure>
     <div class="layout">
       <nav class="contents" aria-label="On this page"><strong>In order</strong><ol><li><a href="#step-1">Identify the smallest useful record</a></li><li><a href="#step-2">Set explicit sharing rules</a></li><li><a href="#step-3">Check the planned boundaries</a></li><li><a href="#step-4">Price, maintain, and test recovery</a></li><li><a href="#step-5">Upgrade with a rollback test</a></li></ol></nav>
       <article><section id="step-1"><h2>1. Identify the smallest useful record</h2><p>Use fictional examples of a household task, an emergency check-in plan, a maintenance handoff, and a shared supply list. The design should account for household records during a routine week, an outage, and a long interruption. Identify the subject, owner, purpose, audience, and how long it needs to be retained. Classify personal records as private by default. Identify who can approve changes. <a href="https://www.nist.gov/system/files/documents/2021/01/13/Getting-Started-NIST-Privacy-Framework-Guide.pdf">NIST privacy guide (PDF)</a></p></section>
 <section id="step-2"><h2>2. Set explicit sharing rules</h2><p>Use two fictional people, A and B. A can read and update A’s personal record. B can read and update B’s record. Both can read the shared list. Set any write permission on the shared list explicitly. Test the proposed rules with read, edit, search, export, and sharing actions.</p></section>
-<section id="step-3"><h2>3. Check the planned boundaries</h2><ol><li>Use a disposable sample environment. Load one record per person and one shared record.</li><li>Check what each sees on direct and aggregate views. Record the expected versus observed result for each action.</li><li>Revoke a sample share and confirm it disappears from the person’s view and subsequent exports.</li></ol><p>In an example with eight correct results out of nine, the sample passes about 89% of checks. Investigate the failed access check and rerun the full sample before relying on personal separation. The current prototype uses shared household roles.</p></section>
+<section id="step-3"><h2>3. Check the planned boundaries</h2><ol><li>Use a disposable sample environment. Load one record per person and one shared record.</li><li>Check what each sees on direct and aggregate views. Record the expected versus observed result for each action.</li><li>Revoke a sample share and confirm it disappears from the person’s view and subsequent exports.</li></ol><p>A failed access boundary blocks the release. Fix it and repeat the full sample. The current prototype uses shared household roles. Individual permissions are still planned.</p>
+<div class="table-scroll"><table><caption>Expected results in a fictional practice run</caption>
+<thead><tr><th scope="col">Scenario</th><th scope="col">Expected result</th></tr></thead>
+<tbody><tr><th scope="row">Person A opens A’s journal</th><td>Allowed.</td></tr>
+<tr><th scope="row">Person B tries A’s journal directly or in search</th><td>Denied directly. No matching item, snippet, or count revealed in search.</td></tr>
+<tr><th scope="row">Person B opens the shared supply list</th><td>Allowed to read while shared. Editing stays with A in this exercise.</td></tr>
+<tr><th scope="row">Person B exports their data</th><td>Includes B’s permitted records and excludes A’s journal. Check the file itself.</td></tr>
+<tr><th scope="row">Share withdrawn, then backup restored</th><td>Reapply newer sharing decisions before restoring household access. B still cannot open the withdrawn item.</td></tr></tbody>
+</table></div>
+</section>
 <section id="step-4"><h2>4. Price, maintain, and test recovery</h2><p>Budget local storage, encrypted backup media, restore time, and whoever is responsible for review. An example 1 GB export kept in two locations uses about 2 GB before version history. Test restore in an isolated environment and confirm that the expected permissions and record counts survived. Agree on who may hold an offline emergency copy and how to update or withdraw it.</p></section>
 <section id="step-5"><h2>5. Upgrade with a rollback test</h2><p>Before updating the application or rules, keep a protected backup and run the sample checks. Re-run privacy and recovery after upgrading. A private record may leave its normal audience only under a specific documented decision covering the purpose and fields.</p><p><a href="./ecosystem.html#familyos">Read FamilyOS’s role and current status</a></p></section>
+<section class="print-only"><h2>Record the fictional access checks</h2><table><thead><tr><th scope="col">Check</th><th scope="col">Expected versus observed</th></tr></thead><tbody><tr><th scope="row">Direct view and search</th><td></td></tr><tr><th scope="row">Shared access and permitted export</th><td></td></tr><tr><th scope="row">Withdrawn share after restore</th><td></td></tr><tr><th scope="row">Follow-up and retest date</th><td></td></tr></tbody></table></section>
 </article>
     </div>
   </main>

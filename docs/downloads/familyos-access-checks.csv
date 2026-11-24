@@ -1,0 +1,10 @@
+Case,Actor,Fixture,Action,Expected,Observed,Result
+F-01,Person A,A journal,Open,Show A journal to A,,
+F-02,Person B,A journal,Open direct link,Deny and reveal no record data,,
+F-03,Person B,A journal,Search,Reveal no private row or snippet or count,,
+F-04,Person B,Supply list,Read while shared,Show the shared list,,
+F-05,Person B,Supply list,Edit,Deny edit for this read-only share,,
+F-06,Person C,Supply list,Open direct link,Deny and reveal no list data,,
+F-07,Person B,A journal,Export,No A journal anywhere in export,,
+F-08,Person B,Supply list,Read after withdrawal,Deny and remove from subsequent exports,,
+F-09,Person B,Supply list,Read after restore and share reconciliation,Keep the withdrawn share inaccessible,,

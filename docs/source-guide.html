@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://deusordo.github.io/NuTerra/source-guide.html">
   <link rel="icon" href="./assets/source.svg" type="image/svg+xml">
   <script src="./theme.js"></script>
-  <link rel="stylesheet" href="./guide.css?v=operating-guides">
+  <link rel="stylesheet" href="./guide.css?v=field-practice">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -19,16 +19,26 @@
   <main class="wrap" id="content" tabindex="-1">
     <h1>Public evidence guide</h1>
     <p class="intro">Create a traceable record for a public claim, document the review, and verify that an export restores intact.</p>
-    <p class="meta">Worked example · Record what a download’s publisher claims.</p>
-    <div class="actions"><a class="download" href="./source-guide.pdf" download>Download printable guide (PDF)</a></div>
+
+    <div class="actions"><a class="download" href="./source-guide.pdf" download>Download printable guide (PDF)</a><a href="./downloads/source-example.csv" download>Sample records (CSV)</a><a href="./downloads/source-example.sha256" download>Sample checksum</a></div>
     <figure><ol class="diagram" role="list"><li>Record the claim<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Review evidence<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Publish a revision<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></li><li>Verify the export</li></ol><figcaption>Evidence review documents what a source supports. A file manifest lets a reader check the exported bytes.</figcaption></figure>
     <div class="layout">
       <nav class="contents" aria-label="On this page"><strong>In order</strong><ol><li><a href="#step-1">Capture the claim and origin</a></li><li><a href="#step-2">Check the scope of the evidence</a></li><li><a href="#step-3">Price and publish a reviewable batch</a></li><li><a href="#step-4">Verify the export and restore it</a></li><li><a href="#step-5">Maintain and upgrade the catalog</a></li></ol></nav>
       <article><section id="step-1"><h2>1. Capture the claim and origin</h2><p>One record should state one checkable claim. Assign a stable record ID and keep the original URL, publisher, title, edition or date, retrieval date, applicable rights, and the part that supports the claim. Record any privacy restriction before adding the item. Prioritize portable repair manuals, emergency references, offline maps, and records of what actually worked. Track each edition, jurisdiction where relevant, permissions, and whether a second person could open it offline.</p><p><a href="https://www.w3.org/TR/prov-overview/">W3C provenance model</a> · <a href="./downloads/source-example.csv" download>Download sample records</a></p></section>
-<section id="step-2"><h2>2. Check the scope of the evidence</h2><p>Write what the source establishes, what observation you made, and what remains unknown. For example, the Kiwix publisher explains how to open a ZIM offline. A device-specific test would separately record the device, archive version, test date, and observed behavior. <a href="https://get.kiwix.org/en/solutions/applications/kiwix-reader/">Kiwix’s documentation</a></p></section>
+<section id="step-2"><h2>2. Check the scope of the evidence</h2><p>Write what the source establishes, what observation you made, and what remains unknown. For example, the Kiwix publisher explains how to open a ZIM offline. A device-specific test would separately record the device, archive version, test date, and observed behavior. <a href="https://get.kiwix.org/en/solutions/applications/kiwix-reader/">Kiwix’s documentation</a></p>
+<div class="table-scroll"><table><caption>What each record can support</caption>
+<thead><tr><th scope="col">Evidence</th><th scope="col">Claim you can record</th><th scope="col">Next check</th></tr></thead>
+<tbody><tr><th scope="row">Official Kiwix instructions</th><td>The reader is designed to open saved ZIM archives offline.</td><td>Open the target archive on a disconnected device.</td></tr>
+<tr><th scope="row">A recorded offline trial</th><td>The stated reader and archive versions worked on the tested device.</td><td>Repeat with the devices your readers actually use.</td></tr>
+<tr><th scope="row">An intact SHA-256 match</th><td>The saved file matches the known manifest.</td><td>Check that the source supports the claim and that the manifest came from the expected publisher.</td></tr></tbody>
+</table></div>
+</section>
 <section id="step-3"><h2>3. Price and publish a reviewable batch</h2><p>Estimate reviewer time separately from storage. For 12 records at 5 minutes each, review time is 60 minutes. Record the review status, reviewer role, date, and a short justification. Export only material cleared for sharing. Assign corrections their own version and link both versions.</p></section>
-<section id="step-4"><h2>4. Verify the export and restore it</h2><p>Export a UTF-8 CSV or structured data file and keep a SHA-256 manifest for the files permitted in the package. Restore a clean copy, compare file hashes, and open a sample row and its evidence. An example audit with 9 matching files out of 10 has 90% coverage. Inspect the missing or changed file before accepting the restore.</p><p><a href="https://www.rfc-editor.org/rfc/rfc8493.html">BagIt file packaging</a> · <a href="https://www.ndsa.org/publications/levels-of-digital-preservation/">NDSA preservation guidance</a></p></section>
+<section id="step-4"><h2>4. Verify the export and restore it</h2><p>Export a UTF-8 CSV or structured data file and keep a SHA-256 manifest for the files permitted in the package. Restore a clean copy, compare file hashes, and open a sample row and its evidence. Check that every expected file is present and matches. A restore with 9 matching files out of 10 fails the integrity check.</p><p><a href="https://www.rfc-editor.org/rfc/rfc8493.html">BagIt file packaging</a> · <a href="https://www.ndsa.org/publications/levels-of-digital-preservation/">NDSA preservation guidance</a></p>
+<div class="worked"><p><strong>Try with the sample CSV.</strong> Save the sample records and checksum into the same folder. Open a terminal there and run <code>shasum -a 256 -c source-example.sha256</code> on macOS or <code>sha256sum -c source-example.sha256</code> on a system with GNU Coreutils. Open the checked CSV and find each original publisher. Keep a clean copy and change a single character in a disposable copy to see the check fail.</p></div>
+</section>
 <section id="step-5"><h2>5. Maintain and upgrade the catalog</h2><p>Review stale links and disputed claims. Record a source’s replacement or loss of access. Keep dated export snapshots, check restore after tooling changes, and keep correction history readable. Use a standard package when exchange with another curator warrants it.</p><p><a href="./source-reference.html#project">See the public evidence example</a></p></section>
+<section class="print-only"><h2>Record the export check</h2><table><thead><tr><th scope="col">Check</th><th scope="col">Result</th></tr></thead><tbody><tr><th scope="row">Release date and source</th><td></td></tr><tr><th scope="row">Expected and matching file counts</th><td></td></tr><tr><th scope="row">Evidence row and source opened</th><td></td></tr><tr><th scope="row">Result and next change</th><td></td></tr></tbody></table></section>
 </article>
     </div>
   </main>
