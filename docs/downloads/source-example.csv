@@ -1,0 +1,3 @@
+record_id,review_date,title,source_url,claim_type,review_state,summary,verification_scope
+example-01,2026-11-23,Kiwix Reader,https://get.kiwix.org/en/solutions/applications/kiwix-reader/,publisher description,source checked,The reader is designed to open downloaded ZIM archives offline.,Checked the official product documentation. A device test is a separate observation.
+example-02,2026-11-23,LOCKSS preservation principles,https://www.lockss.org/about/preservation-principles,design guidance,source checked,Manage preservation copies across independent points of control.,Checked the published design guidance. Validate your own recovery process with a restore.

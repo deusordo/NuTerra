@@ -1,0 +1,28 @@
+NUTERRA OFFLINE HANDOFF CHECKLIST
+Edition 1 · November 2026
+
+Purpose
+Find out whether another person can complete a low-risk job using a
+saved or printed guide. A shared workshop inventory is one example.
+
+Prepare
+[ ] Pick one task, a safe place to try it, and an expected result.
+[ ] Put the edition, publication date, and evidence references on the guide.
+[ ] List required materials and where to find them.
+[ ] Save the guide and approved attachments locally. Print a copy if useful.
+[ ] Confirm the test materials can be shared with the reader.
+
+Run
+[ ] Open the files in a fresh local session and disconnect from the internet.
+[ ] Ask someone unfamiliar with the guide to perform the task.
+[ ] Observe where they look, what they ask, and where they stop.
+[ ] Confirm the result against the expected outcome.
+[ ] Record time, missing information, unexpected dependencies, and fixes.
+
+Review
+[ ] Update the guide and label the new version.
+[ ] Keep the previous version with its evidence and corrections.
+[ ] Have a second reader repeat the task before marking the handoff verified.
+
+Use a safe, reversible test task. Store result notes without identifying
+participants or recording private locations if the notes will be shared.

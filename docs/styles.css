@@ -90,6 +90,18 @@ h1, h2 { letter-spacing: -.045em; }
 .pillar-heading + p { margin-top: .6rem; }
 .status { display: inline-block; margin-block: .55rem .2rem; color: var(--forest-deep); font-size: .82rem; font-weight: 700; }
 .phase + .phase { margin-top: 1.35rem; }
+.home-project { width: min(calc(100% - var(--gap) * 2), 57rem); margin-block-start: clamp(2.4rem, 6vw, 4.5rem); padding-block-start: 1.45rem; border-block-start: 1px solid var(--line); }
+.home-project h2 { font-size: clamp(1.85rem, 4vw, 3rem); margin-block-end: .4rem; }
+.home-project p { max-width: 42rem; color: var(--muted); }
+.question-list { margin: .6rem 0 0; }
+.question-list dt { font-weight: 700; margin-block-start: 1rem; }
+.question-list dd { margin: .2rem 0 .85rem; color: var(--muted); }
+.question-list dd + dt { border-block-start: 1px solid var(--line); padding-block-start: .75rem; }
+.detail .project-note { margin-block-start: 1rem; padding-inline-start: .8rem; border-inline-start: 2px solid var(--forest); }
+.detail .record-example { border: 1px solid var(--border); border-radius: .55rem; background: var(--card); padding: .8rem 1rem; margin-block: 1rem; }
+.record-example dl { margin: .65rem 0 0; }
+.record-example dt { margin-block-start: .48rem; font-weight: 650; }
+.record-example dd { margin-inline-start: 0; color: var(--muted); overflow-wrap: anywhere; }
 
 @media (max-width: 830px) {
   .header-inner { gap: .65rem; }
