@@ -45,6 +45,11 @@ h1, h2 { letter-spacing: -.045em; }
 .hero-mark { width: min(100%, 25.5rem); margin-inline: auto; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: .75rem; min-height: 3.15rem; margin-top: 1.55rem; padding: .65rem clamp(.95rem, 3.55vw, 2.35rem); border-radius: .42rem; background: var(--forest); color: white; font: clamp(1rem, 2.2vw, 1.35rem)/1.25 var(--serif); text-decoration: none; }
 .button:hover { background: var(--forest-deep); }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .2rem 1.4rem; margin-top: 1.35rem; }
+.hero-actions .button { margin-top: 0; }
+.hero-actions .text-link { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.project-status { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 2rem; margin-block-start: clamp(1.5rem, 4vw, 3.3rem); padding-block: 1rem; border-block: 1px solid var(--line); font-size: .95rem; color: var(--muted); }
+.project-status strong { display: block; color: var(--ink); }
 .button svg, .text-link svg { width: 1.13em; height: 1.13em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; }
 
 .ecosystem { width: min(calc(100% - clamp(2rem, 5.8vw, 6rem)), 80rem); margin: clamp(4.1rem, 8.3vw, 8rem) auto 0; }
@@ -113,8 +118,9 @@ h1, h2 { letter-spacing: -.045em; }
   .header-inner { flex-wrap: wrap; justify-content: flex-start; padding-top: .65rem; }
   .brand span { font-size: 1rem; }
   .site-nav { border: 0; padding: 0; width: 100%; justify-content: space-between; gap: .35rem; }
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 1.9rem; padding-top: 2.35rem; }
-  .hero-mark { width: min(57%, 14.2rem); margin-inline: auto; }
+  .hero { grid-template-columns: minmax(0, 1fr); padding-top: 2rem; }
+  .hero-mark { display: none; }
+  .project-status { grid-template-columns: 1fr; }
   .ecosystem { margin-top: 2.75rem; }
   .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillar { min-height: 11.5rem; }
